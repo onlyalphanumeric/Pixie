@@ -3,6 +3,7 @@ from nextcord.ext import commands
 from nextcord import Interaction, SlashOption
 from nextcord.ui import Button, Select, View, Modal
 from pymongo import MongoClient
+from keep_alive import keep_alive
 
 intents = nextcord.Intents.default()
 intents.message_content = True
