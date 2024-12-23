@@ -1,4 +1,5 @@
 import nextcord
+import os
 from nextcord.ext import commands
 from nextcord import Interaction, SlashOption
 from nextcord.ui import Button, Select, View, Modal
@@ -10,6 +11,7 @@ intents.message_content = True
 bot = commands.Bot(intents=intents, help_command=None)
 
 MONGO_URI = "mongodb+srv://admin:K6njQSA7mtHSI0C4@pixie.98du4.mongodb.net/?retryWrites=true&w=majority&appName=pixie"
+BOT_TOKEN = os.getenv("BOT_TOKEN")
 
 client = MongoClient(MONGO_URI)
 db = client["application_bot"]
